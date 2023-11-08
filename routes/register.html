@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Polling Booth  System - Registration</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+
+        <style>
+
+            #address{
+                width: 30%;
+            }
+
+            #imagepart{
+                border: 2px solid black;
+                border-radius: 5px;
+                padding: 10px;
+                width: 30%;
+            }
+
+            #role{
+                border: 2px solid black;
+                border-radius: 5px;
+                padding: 10px;
+                width: 30%;
+            }
+
+            #role select{
+                border-radius: 5px;
+                padding: 10px;
+            }
+
+            #btn{
+                padding: 10px 20px;
+                font-size: 15px;
+                background-color: #3498db;
+                color: white;
+                border-radius: 5px;
+            }
+
+
+            #headerSection{
+                color: white;
+            }
+        </style>
+        <center>
+            <div id="headerSection">
+                <h1>Polling Booth System</h1>
+            </div>
+        </center>
+        <hr>
+
+
+        <center>
+        <div id="bodySection">
+            <h2 id="headerSection">Registration</h2>
+            <form action="../api/register.php" method="POST" enctype="multipart/form-data">
+                <input type="text" name="name" placeholder="Enter name" required> 
+                <input type="number" name="mobile" placeholder="Enter mobile" required><br><br> 
+                <input type="password" name="password" placeholder="Password" required> 
+                <input type="password" name="cpassword" placeholder="Confirm Password" required><br><br> 
+            <input id="address" type="text" name="address" placeholder="Address" required><br><br>
+            
+
+                    <div id="imagepart">
+                        Upload image: <input type="file" name="photo" required>
+                    </div>
+                    <br><br>
+
+                    <div id="role" >
+                        Select role: <Select name="role">
+                            <option value="1">Voter</option>
+                            <option value="2">Group</option>
+                        </Select>
+                    </div>
+                    
+                    <br><br>
+                    <button id="btn">Register</button><br><br>
+                    Already user? <a style="color: white;" href="../index.html">Login here</a>
+                </form>
+            </div>
+        </center>
+    </body>
+</html>
